@@ -1,0 +1,43 @@
+[
+    {
+      "id_tipo_evaluacion":1,
+      "nombre": "EL LOGRO DE LOS OBJETIVOS PROPUESTOS EN EL EVENTO DE CAPACITACIÓN FUE",
+      "activo": 1
+    },
+    {
+      "id_tipo_evaluacion":1,
+      "nombre": "El PARTICIPANTE PERCIBIO LO APRENDIDO COMO",
+      "activo": 1
+    },
+    {
+      "id_tipo_evaluacion":2,
+      "nombre": "EL INSTRUCTOR DEMOSTRO Y SUPO TRANSMITIR SUS CONOCIMIENTOS PROFECIONALES Y EXPERIENCIA EN FORMA",
+      "activo": 1
+    },
+    {
+      "id_tipo_evaluacion":2,
+      "nombre": "EL INSTRUCTOR SUPO HACER USO DE LOS RECURSO Y MATERIAL DIDÁCTICO EN FORMA",
+      "activo": 1
+    },
+    {
+      "id_tipo_evaluacion":2,
+      "nombre": "EL INSTRUCTOR SUPO TRANSMITIR CONFIANZA PARA FACILITAR LA PARTICIPACIÓN EN FORMA",
+      "activo": 1
+    },
+    {
+      "id_tipo_evaluacion":2,
+      "nombre": "EL INSTRUCTOR CUMPLIO LOS CONTENIDOS DEL PROGRAMA Y LOS HORARIOS ESTABLECIDOS EN FORMA",
+      "activo": 1
+    },
+    {
+      "id_tipo_evaluacion":3,
+      "nombre": "EL AMBIENTE FÍSICO MOBILIARIO INSUMOS Y EQUIPOS DE CAPACITACIÓN FACILITARON LA EJECUCIÓN DEL EVENTO",
+      "activo": 1
+    },
+    {
+      "id_tipo_evaluacion":3,
+      "nombre": "EL DESCANSO PEDAGOGICO Y EL SERVICIO DE REFRIGERIO - SI ESTABA COMPROMETIDO - FUERON OPORTUNOS Y SUFUCIENTES",
+      "activo": 1
+    }
+    
+]

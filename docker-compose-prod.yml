@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  node:
+    container_name: app_capacitacionapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 4007:3008
+    restart: always
+    command: >
+      sh -c "node app"
+    volumes:
+      - .:/code
+      - /code/node_modules
+    networks:
+      - capacitacionapi-network
+networks:
+  capacitacionapi-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.1.0.0/16

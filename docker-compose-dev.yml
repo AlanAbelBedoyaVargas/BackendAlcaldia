@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  node:
+    container_name: app_capacitacionapidev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8009:3008
+    restart: always
+    command: >
+      sh -c "node app"
+    volumes:
+      - .:/code
+      - /code/node_modules
+    networks:
+      - capacitacionapidev-network
+networks:
+  capacitacionapidev-network:
+    driver: bridge
