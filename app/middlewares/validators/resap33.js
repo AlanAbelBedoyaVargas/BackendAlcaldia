@@ -72,6 +72,17 @@ const validationSchema = {
             errorMessage: "La dirección debe tener entre 3 y 255 caracteres",
         },
     },
+    "resap33.gestion": {
+        in: ["body"],
+        exists: {
+            bail: true, // Detener validaciones si este campo no existe
+            errorMessage: "La gestion es obligatoria",
+        },
+        isInt: {
+            options: { min: 1 },
+            errorMessage: "La gestión debe ser un número entero positivo",
+        },
+    },
     conExigido: {
         isArray: {
             bail: true,

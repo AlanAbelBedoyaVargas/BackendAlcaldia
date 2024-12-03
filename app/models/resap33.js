@@ -20,6 +20,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   Resap33.init({
     uuid: DataTypes.TEXT,
+    //modificación
+    gestion:DataTypes.INTEGER,
     sector:DataTypes.STRING, 
     secretaria: DataTypes.STRING,
     dirección: DataTypes.STRING,
