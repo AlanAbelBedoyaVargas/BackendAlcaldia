@@ -218,13 +218,30 @@ const validationSchema = {
         },
     },
     "capMateria.*.materias": {
-        isString: {
-            errorMessage: "El campo 'materias' debe ser un texto",
+        optional: true, // El campo no es obligatorio
+        custom: {
+            options: (value) => {
+                // Permitir valores null
+                if (value === null) {
+                    return true;
+                }
+
+                // Validar que sea un string y cumpla con el rango de longitud
+                if (typeof value !== "string") {
+                    throw new Error(
+                        "El campo 'conocimientos' dentro de 'conAmpliar' debe ser un texto"
+                    );
+                }
+                if (value.length < 3 || value.length > 255) {
+                    throw new Error(
+                        "El campo 'conocimientos' dentro de 'conAmpliar' debe tener entre 3 y 255 caracteres"
+                    );
+                }
+
+                return true;
+            },
         },
-        isLength: {
-            options: { min: 3, max: 255 },
-            errorMessage: "El campo 'materias' debe tener entre 3 y 255 caracteres",
-        },
+        
     },
     "capMateria.*.id_curso": {
         optional: true,
