@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   ConocimientoAmpliar.init({
     uuid: DataTypes.TEXT,
     conocimientos: DataTypes.STRING,
-    es_otro: DataTypes.BOOLEAN
+    //es_otro: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'ConocimientoAmpliar',

@@ -162,12 +162,12 @@ const validationSchema = {
             },
         },
     },
-    "conAmpliar.*.es_otro": {
-        isBoolean: {
-            errorMessage: "El campo 'es_otro' debe ser de tipo booleano",
-        },
-        toBoolean: true,
-    },
+    // "conAmpliar.*.es_otro": {
+    //     isBoolean: {
+    //         errorMessage: "El campo 'es_otro' debe ser de tipo booleano",
+    //     },
+    //     toBoolean: true,
+    // },
     funcionCon: {
         isArray: {
             bail: true,
@@ -224,6 +224,23 @@ const validationSchema = {
         isLength: {
             options: { min: 3, max: 255 },
             errorMessage: "El campo 'materias' debe tener entre 3 y 255 caracteres",
+        },
+    },
+    "capMateria.*.id_curso": {
+        optional: true,
+        custom: {
+            options: async (value) => {
+                if (value !== null) {
+                    try {
+                        // Llama a la función y captura cualquier error lanzado
+                        await idExistCurso(value);
+                    } catch (error) {
+                        // Si hay un error, lo lanza con el mensaje recibido
+                        throw new Error(error.message);
+                    }
+                }
+                return true; // Validación exitosa si no hay errores
+            },
         },
     },
 

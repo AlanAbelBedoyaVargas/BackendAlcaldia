@@ -12,7 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Curso.hasMany(models.Capacitacion,{as:'curso_capacitacion' ,foreignKey: 'id_curso' });
-      Curso.hasMany(models.ConocimientoAmpliar,{as:'curso_conampliar' ,foreignKey: 'id_curso' });      
+      Curso.hasMany(models.ConocimientoAmpliar,{as:'curso_conampliar' ,foreignKey: 'id_curso' });
+      Curso.hasMany(models.CapacitadorMateria,{as:'curso_capmateria' ,foreignKey: 'id_curso' });      
     }
   }
   Curso.init({
