@@ -22,6 +22,11 @@ const validationSchema =  {
         isBoolean: {
             errorMessage: "El estado debe ser de tipo bigint [0,1]",
         }
+    },
+    resap: {
+        isInt: {
+            errorMessage: "El campo 'resap' debe ser de tipo int",
+        }
     }
 };
 const validationSchemaTipo =  {

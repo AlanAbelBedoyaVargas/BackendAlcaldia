@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
   CriterioEvaluacion.init({
     uuid: DataTypes.TEXT,
     nombre: DataTypes.STRING(200),
-    activo: DataTypes.BIGINT
+    activo: DataTypes.BIGINT,
+    resap: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'CriterioEvaluacion',

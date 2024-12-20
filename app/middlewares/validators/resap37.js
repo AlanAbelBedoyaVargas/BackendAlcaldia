@@ -44,13 +44,9 @@ const validationSchema = {
         },
     },
     "resap37.*.estado": {
-        isString: {
-            bail: true,
-            errorMessage: "La evaluación debe ser un texto",
-        },
-        isLength: {
-            options: { min: 4, max: 10 },
-            errorMessage: "La evaluación debe tener hasta 10 caracteres",
+        isIn: {
+            options: [["MUY BUENO", "BUENO", "ACEPTABLE","DEFICIENTE"]],
+            errorMessage: "El campo 'estado' debe 'MUY BUENO','BUENO', 'ACEPTABLE' o 'DEFICIENTE'",
         },
         // matches: {
         //     options: [/^(aceptable|muy bueno|bueno|regular)$/i],
@@ -83,13 +79,9 @@ const getValidateUpdate = [
             },
         },
         estado: {
-            isString: {
-                bail: true,
-                errorMessage: "El estado debe ser texto",
-            },
-            isLength: {
-                options: { min: 4, max: 10 },
-                errorMessage: "El estado debe tener hasta 10 caracteres",
+            isIn: {
+                options: [["MUY BUENO", "BUENO", "ACEPTABLE","DEFICIENTE"]],
+                errorMessage: "El campo 'estado' debe ser 'MUY BUENO','BUENO', 'ACEPTABLE' o 'DEFICIENTE'",
             },
         },
         activo: {
